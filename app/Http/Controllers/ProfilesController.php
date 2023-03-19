@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class ProfilesController extends Controller
 {
-    //CULO SEXO aaaaa
+
+    //CULO SEXO
+   
+
 }
