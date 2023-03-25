@@ -24,6 +24,7 @@ class User extends Authenticatable
         'password',
     ];
 
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -57,11 +58,14 @@ class User extends Authenticatable
         return $this->hasMany(Post::class)->orderBy('created_at', 'DESC');
     }
 
+    public function following(){
+    
+        return $this->belongsToMany(Profile::class);
+    }
     public function profile(){
 
         return $this->hasOne(Profile::class);
     }
 
-    
-    
+
 }

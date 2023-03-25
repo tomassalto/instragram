@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('follow/{user}',[App\Http\Controllers\FollowsController::class, 'store']);
 
 Route::get('/p/create', [App\Http\Controllers\PostsController::class, 'create']);
 Route::post('/p', [App\Http\Controllers\PostsController::class, 'store']);
@@ -31,3 +32,7 @@ Route::patch('/profile/{user}', [App\Http\Controllers\ProfilesController::class,
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
